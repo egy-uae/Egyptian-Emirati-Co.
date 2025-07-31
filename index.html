@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرئيسية - الشركة المصرية الإماراتية</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -27,21 +29,83 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content animate-on-scroll">
                 <h1>جسركم التجاري نحو الأسواق العالمية</h1>
                 <p>نقدم حلولاً متكاملة في الاستيراد والتصدير والتوكيلات التجارية، تجمع بين الخبرة العريقة والرؤية المستقبلية.</p>
                 <a href="contact.html" class="button-primary">اطلب استشارة مجانية</a>
             </div>
         </section>
+
+        <!-- Features Section -->
+        <section class="page-section">
+            <div class="container">
+                <h2 class="page-title animate-on-scroll">خدماتنا الأساسية</h2>
+                <p class="page-subtitle animate-on-scroll">نوفر حلولاً شاملة ومصممة خصيصًا لدعم أعمالك في كل خطوة على طريق التجارة الدولية.</p>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-ship"></i></div>
+                        <h3>الاستيراد والتصدير</h3>
+                        <p>إدارة كاملة لعمليات الشحن والخدمات اللوجستية والتخليص الجمركي لضمان وصول بضائعك بأمان وكفاءة.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>التوكيلات التجارية</h3>
+                        <p>نمثل حلقة الوصل بينك وبين أفضل العلامات التجارية العالمية، ونوفر الدعم اللازم للتوزيع والنجاح في السوق.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-globe-africa"></i></div>
+                        <h3>الاستشارات التجارية</h3>
+                        <p>نقدم خبراتنا لمساعدتك في دراسة الأسواق وتحديد الفرص وتجنب التحديات لضمان نمو أعمالك.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="250">0</div>
+                        <div class="stat-label">شحنة ناجحة</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">سوق عالمي</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% رضا العملاء</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">سنوات من الخبرة</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="page-section cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>هل أنت مستعد للارتقاء بأعمالك؟</h2>
+                    <p class="page-subtitle" style="margin-bottom: 30px;">فريقنا جاهز لمساعدتك في تحقيق أهدافك التجارية. تواصل معنا اليوم.</p>
+                    <a href="contact.html" class="button-primary">ابدأ الآن</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>عن الشركة</h4>
-                    <p>الشركة المصرية الإماراتية هي شريكك الاستراتيجي للنمو والتوسع في التجارة الدولية.</p>
+                    <h4>الشركة المصرية الإماراتية</h4>
+                    <p>شريكك الاستراتيجي للنمو والتوسع في التجارة الدولية.</p>
                 </div>
                 <div class="footer-col">
                     <h4>روابط سريعة</h4>
@@ -53,9 +117,9 @@
                 </div>
                 <div class="footer-col">
                     <h4>معلومات الاتصال</h4>
-                    <p>العنوان: العاشر من رمضان, الشرقية, مصر</p>
-                    <p>البريد الإلكتروني: <a href="mailto:info@egy-uae.cloud">info@egy-uae.cloud</a></p>
-                    <p>الهاتف : (20) 101-337-8572</p>
+                    <p><i class="fas fa-map-marker-alt"></i> العاشر من رمضان, الشرقية, مصر</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@egy-uae.cloud">info@egy-uae.cloud</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+201013378572">+(20) 101-337-8572</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -63,5 +127,76 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // Animate elements on scroll
+        const scrollElements = document.querySelectorAll(".animate-on-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("is-visible");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("is-visible");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        }
+
+        // Animated number counter
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200; // The lower the number, the faster the count
+
+            counters.forEach(counter => {
+                const animate = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = Math.ceil(target / speed);
+
+                    if (count < target) {
+                        counter.innerText = count + inc;
+                        setTimeout(animate, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                animate();
+            });
+        }
+        
+        // Use Intersection Observer to trigger counter animation only when visible
+        const statsSection = document.querySelector('.stats-section');
+        let hasAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    animateCounters();
+                    hasAnimated = true; // Ensure it animates only once
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+
+        if(statsSection) {
+            observer.observe(statsSection);
+        }
+
+        window.addEventListener("scroll", () => { 
+            handleScrollAnimation();
+        });
+    </script>
 </body>
 </html>
