@@ -7,59 +7,100 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><!-- نفس كود الهيدر من الصفحة الرئيسية مع تغيير li class="current" --></header>
-    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" id="branding">
+                    <img src="https://lh4.googleusercontent.com/H9qNk6_6IKKPu3i5tGRyYjiTue75mSLJqcRn-zChCM1MoAVrG4vTR78uMWvR1h4zFwxQF-AxjU54sAowZ5c_dWUp791Y57fAIKCZR3RRx5QFgFOVgVREC-LHJjmCtQ_ngJXzvxrKjeE=w16383" alt="شعار الشركة المصرية الإماراتية">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li class="current"><a href="about.html">عن الشركة</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li class="lang-switch"><a href="about-en.html">English</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container page-header-container">
+                <h1>من نحن</h1>
+                 <!-- Back Button -->
+                <a href="javascript:history.back()" class="back-button">
+                    <i class="fas fa-arrow-right"></i> رجوع
+                </a>
+            </div>
+        </section>
+
+        <!-- Main Content -->
         <section class="page-section">
             <div class="container">
-                <h1 class="page-title">قصتنا ورؤيتنا</h1>
-                <p class="page-subtitle">نحن أكثر من مجرد شركة تجارية، نحن شركاء نجاح نعمل بشغف لبناء جسور من الثقة والفرص.</p>
                 
-                <div class="about-grid">
+                <!-- Establishment Section -->
+                <div class="content-grid">
+                    <div class="content-grid-icon"><i class="fas fa-building"></i></div>
                     <div class="content-section">
-                        <h2>من نحن</h2>
-                        <p>تأسست الشركة المصرية الإماراتية على أساس من الخبرة العميقة في الأسواق المحلية والدولية. نهدف إلى تمكين الشركات من خلال توفير خدمات لوجستية وتجارية عالمية المستوى، مع التركيز على الكفاءة والابتكار والالتزام بأعلى معايير الجودة.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="فريق عمل الشركة">
+                        <h2>تأسيسنا وهدفنا</h2>
+                        <p>تأسست المؤسسة المصرية الإماراتية للاستيراد والتصدير والوكالات التجارية في عام 2010 لتسهيل التجارة العالمية مع مصر كمركز استراتيجي. نحن متخصصون في الاستيراد من الأسواق العالمية إلى مصر وتصدير المنتجات المصرية عالية الجودة إلى الوجهات الدولية، وإيجاد فرص تجارية قيمة لشركائنا العالميين.</p>
                     </div>
                 </div>
 
-                <div class="values-grid" style="margin-top: 80px;">
-                    <div class="card"><h3>رسالتنا</h3><p>تسهيل التجارة الدولية لعملائنا عبر حلول مبتكرة وموثوقة.</p></div>
-                    <div class="card"><h3>رؤيتنا</h3><p>أن نكون الخيار الأول للشركات الباحثة عن التميز في التجارة العالمية.</p></div>
-                    <div class="card"><h3>قيمنا</h3><p>النزاهة، الالتزام، الجودة، والتركيز على العميل.</p></div>
+                <!-- Expertise Section -->
+                <div class="content-grid">
+                     <div class="content-grid-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="content-section">
+                        <h2>خبرتنا وشبكتنا</h2>
+                        <p>بفضل المعرفة العميقة بالأسواق الدولية والشبكات العالمية الواسعة، نقدم خدمات شاملة لمساعدة الشركات على التنقل في تعقيدات التجارة العالمية. يقدم فريق الخبراء لدينا حلولاً مخصصة مصممة لربط الشركات المصرية بالفرص العالمية وجلب المنتجات الدولية إلى السوق المصرية.</p>
+                    </div>
                 </div>
+
+                <!-- Mission Section -->
+                <div class="mission-section">
+                    <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                    <h2>رسالتنا</h2>
+                    <p class="page-subtitle" style="margin-bottom: 0;">مهمتنا هي تعزيز مصر كبوابة تجارية عالمية، والمساهمة في نمو وازدهار الشركات المصرية من خلال الشراكات الدولية الاستراتيجية والحلول التجارية المبتكرة التي تربط مصر بالأسواق العالمية.</p>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <!-- Footer Code (The new updated version) -->
     <footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>الشركة المصرية الإماراتية</h4>
-                <p>شريكك الاستراتيجي للنمو والتوسع في التجارة الدولية.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>الشركة المصرية الإماراتية</h4>
+                    <p><i class="fas fa-info-circle"></i> شريكك الاستراتيجي للنمو والتوسع.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="about.html"><i class="fas fa-users"></i> من نحن</a></li>
+                        <li><a href="services.html"><i class="fas fa-cogs"></i> خدماتنا</a></li>
+                        <li><a href="contact.html"><i class="fas fa-headset"></i> تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>معلومات الاتصال</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> العاشر من رمضان, الشرقية, مصر</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@egy-uae.cloud">info@egy-uae.cloud</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+201013378572" dir="ltr">+(20) 101-337-8572</a></p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>روابط سريعة</h4>
-                <ul>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="services.html">خدماتنا</a></li>
-                    <li><a href="contact.html">تواصل معنا</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>معلومات الاتصال</h4>
-                <p><i class="fas fa-map-marker-alt"></i> العاشر من رمضان, الشرقية, مصر</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:info@egy-uae.cloud">info@egy-uae.cloud</a></p>
-                <p><i class="fas fa-phone"></i> <a href="tel:+201013378572" dir="ltr">+(20) 101-337-8572</a></p>
+            <div class="footer-bottom">
+                <p>© 2025 الشركة المصرية الإماراتية. جميع الحقوق محفوظة.</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2025 الشركة المصرية الإماراتية. جميع الحقوق محفوظة.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- Cookie Banner and Script will be here -->
+    
 </body>
 </html>
