@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Egyptian-Emirati Co.</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
+    <header><!-- انسخ الهيدر من النسخة العربية وعدل الروابط لتشير للصفحات الإنجليزية -->
         <div class="container">
             <div class="header-content">
                 <a href="index-en.html" id="branding">
@@ -27,11 +29,72 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content animate-on-scroll">
                 <h1>Your Commercial Bridge to Global Markets</h1>
                 <p>We provide integrated solutions in import, export, and commercial agencies, combining deep-rooted expertise with a futuristic vision.</p>
                 <a href="contact-en.html" class="button-primary">Request a Free Consultation</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="page-section">
+            <div class="container">
+                <h2 class="page-title animate-on-scroll">Our Core Services</h2>
+                <p class="page-subtitle animate-on-scroll">We provide comprehensive, tailor-made solutions to support your business at every step of its international trade journey.</p>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-ship"></i></div>
+                        <h3>Import & Export</h3>
+                        <p>Full management of shipping, logistics, and customs clearance to ensure your goods arrive safely and efficiently.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Commercial Agencies</h3>
+                        <p>We act as the link between you and top global brands, providing the support needed for successful market distribution.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-globe-africa"></i></div>
+                        <h3>Trade Consulting</h3>
+                        <p>We offer our expertise to help you study markets, identify opportunities, and navigate challenges to ensure business growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="250">0</div>
+                        <div class="stat-label">Successful Shipments</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">Global Markets</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% Client Satisfaction</div>
+                    </div>
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="page-section cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>Ready to Elevate Your Business?</h2>
+                    <p class="page-subtitle" style="margin-bottom: 30px;">Our team is ready to help you achieve your business goals. Contact us today.</p>
+                    <a href="contact-en.html" class="button-primary">Get Started</a>
+                </div>
             </div>
         </section>
     </main>
@@ -40,22 +103,22 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>About Us</h4>
-                    <p>Egyptian-Emirati Co. is your strategic partner for growth and expansion in international trade.</p>
+                    <h4>Egyptian-Emirati Co.</h4>
+                    <p>Your strategic partner for growth and expansion in international trade.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="about-en.html">About Us</a></li>
-                        <li><a href="services-en.html">Our Services</a></li>
+                        <li><a href="services-en.html">Services</a></li>
                         <li><a href="contact-en.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <p>Address: 10th of Ramadan, Al Sharqia, Egypt</p>
-                    <p>Email: <a href="mailto:info@egy-uae.cloud">info@egy-uae.cloud</a></p>
-                    <p>Phone: (20) 101-337-8572</p>
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 10th of Ramadan, Sharqia, Egypt</p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@egy-uae.cloud">info@egy-uae.cloud</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+201013378572">+(20) 101-337-8572</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -63,5 +126,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Animations (Same script as the Arabic version) -->
+    <script>
+        const scrollElements=document.querySelectorAll(".animate-on-scroll");const elementInView=(e,t=1)=>e.getBoundingClientRect().top<=(window.innerHeight||document.documentElement.clientHeight)/t;const displayScrollElement=e=>{e.classList.add("is-visible")};const handleScrollAnimation=()=>{scrollElements.forEach(e=>{elementInView(e,1.25)&&displayScrollElement(e)})};function animateCounters(){const e=document.querySelectorAll(".stat-number");e.forEach(e=>{const t=()=>{const n=+e.getAttribute("data-target"),o=+e.innerText,a=Math.ceil(n/200);o<n?(e.innerText=o+a,setTimeout(t,10)):e.innerText=n};t()})}const statsSection=document.querySelector(".stats-section");let hasAnimated=!1;const observer=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&!hasAnimated&&(animateCounters(),hasAnimated=!0)})},{threshold:.5});statsSection&&observer.observe(statsSection),window.addEventListener("scroll",()=>{handleScrollAnimation()});
+    </script>
 </body>
 </html>
