@@ -9,25 +9,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" id="branding">
-                    <img src="https://lh4.googleusercontent.com/H9qNk6_6IKKPu3i5tGRyYjiTue75mSLJqcRn-zChCM1MoAVrG4vTR78uMWvR1h4zFwxQF-AxjU54sAowZ5c_dWUp791Y57fAIKCZR3RRx5QFgFOVgVREC-LHJjmCtQ_ngJXzvxrKjeE=w16383" alt="شعار الشركة المصرية الإماراتية">
-                </a>
-                <nav>
-                    <ul>
-                        <li class="current"><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">عن الشركة</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="contact.html">اتصل بنا</a></li>
-                        <li class="lang-switch"><a href="index-en.html">English</a></li>
-                    </ul>
-                </nav>
+    <!-- === استبدل الهيدر القديم بهذا === -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a href="index.html" id="branding">
+                <img src="https://lh4.googleusercontent.com/H9qNk6_6IKKPu3i5tGRyYjiTue75mSLJqcRn-zChCM1MoAVrG4vTR78uMWvR1h4zFwxQF-AxjU54sAowZ5c_dWUp791Y57fAIKCZR3RRx5QFgFOVgVREC-LHJjmCtQ_ngJXzvxrKjeE=w16383" alt="شعار الشركة المصرية الإماراتية للاستيراد والتصدير">
+            </a>
+            <!-- Desktop Navigation -->
+            <nav>
+                <!-- ستكون الروابط هنا كما هي، مع تعديل class="current" لكل صفحة -->
+                <ul>
+                    <li class="current"><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن الشركة</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" id="hamburger-icon">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
+<!-- === أضف هذا الكود مباشرة بعد وسم <body> في كل صفحة === -->
+<!-- Mobile Navigation Panel -->
+<div class="mobile-nav" id="mobile-nav-panel">
+    <div class="close-btn" id="close-icon">×</div>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">عن الشركة</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="index-en.html">English</a></li>
+    </ul>
+</div>
+
+<!-- === ضع هذا الكود (أو أضف الجزء الجديد منه) في نهاية كل صفحة قبل </body> === -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // --- Mobile Menu Logic ---
+        const hamburger = document.getElementById('hamburger-icon');
+        const mobileNav = document.getElementById('mobile-nav-panel');
+        const closeBtn = document.getElementById('close-icon');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+        });
+
+        // --- باقي أكواد الجافاسكريبت (الكوكيز، الأنيميشن) تبقى كما هي ---
+        // ...
+    });
+</script>
     <main>
         <!-- Hero Section -->
         <section class="hero">
