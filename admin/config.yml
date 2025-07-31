@@ -1,38 +1,25 @@
-# هذا هو ملف الإعدادات الخاص بلوحة التحكم
 backend:
   name: github
-  repo: your-username/your-repo-name # **مهم جداً: استبدل باسم المستخدم والمستودع الخاص بك**
-  branch: main # أو master حسب اسم الفرع الرئيسي لديك
+  repo: egy-uae/Egyptian-Emirati-Co. # لقد تحققت من هذا، وهو صحيح
+  branch: main
+  site_domain: egy-uae.github.io
 
-# هذا يحدد أين سيتم رفع الصور التي ترفعها من لوحة التحكم
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+# هذا ضروري للمصادقة
+publish_mode: editorial_workflow
 
-# هنا نحدد الصفحات التي يمكن تعديلها
+# هذا يحدد أين سيتم رفع الصور
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
 collections:
-  - name: "pages" # اسم المجموعة
-    label: "الصفحات" # الاسم الذي سيظهر في لوحة التحكم
+  - name: "pages_ar"
+    label: "الصفحات (العربية)"
     files:
-      - file: "about.html" # المسار إلى الملف الذي تريد تعديله
-        label: "صفحة عن الشركة (عربي)" # اسم الصفحة في لوحة التحكم
-        name: "about_ar"
+      - label: "صفحة عن الشركة"
+        name: "about"
+        file: "about.html"
         fields:
-          - {label: "عنوان الصفحة في المتصفح (Title)", name: "title", widget: "string"}
-          - {label: "وصف الصفحة لمحركات البحث (Description)", name: "description", widget: "text"}
-          - {label: "محتوى الصفحة", name: "body", widget: "markdown"}
-      - file: "about-en.html" # ملف النسخة الإنجليزية
-        label: "صفحة عن الشركة (إنجليزي)"
-        name: "about_en"
-        fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Description for SEO", name: "description", widget: "text"}
-          - {label: "Page Content", name: "body", widget: "markdown"}
-
-      # يمكنك إضافة المزيد من الصفحات هنا بنفس الطريقة
-      # مثال لصفحة الخدمات
-      - file: "services.html"
-        label: "صفحة خدماتنا (عربي)"
-        name: "services_ar"
-        fields:
-          - {label: "عنوان الصفحة", name: "title", widget: "string"}
-          - {label: "المحتوى الرئيسي", name: "body", widget: "markdown"}
+          - { label: "عنوان الصفحة (للمتصفح و SEO)", name: "title", widget: "string" }
+          - { label: "وصف الصفحة (لـ SEO)", name: "description", widget: "string" }
+          - { label: "العنوان الرئيسي داخل الصفحة", name: "page_title", widget: "string" }
+          - { label: "محتوى الصفحة الكامل", name: "body", widget: "markdown" }
