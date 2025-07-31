@@ -100,7 +100,84 @@
         </div>
     </footer>
 
-    <!-- Cookie Banner and Script will be here -->
+    <!-- Cookie Consent Banner HTML -->
+<div id="cookie-banner" class="cookie-consent-banner">
+    <p class="cookie-text">نحن نستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة على موقعنا. بالمتابعة، فإنك توافق على <a href="#" style="color: white; text-decoration: underline;">سياسة الخصوصية</a>.</p>
+    <button id="cookie-accept-btn">موافق</button>
+</div>
+
+
+<!-- JavaScript for Cookie Banner and other features -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        // --- Cookie Banner Logic ---
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('cookie-accept-btn');
+
+        // Check if consent was already given
+        if (!localStorage.getItem('cookie_consent')) {
+            setTimeout(() => {
+                banner.classList.add('active');
+            }, 2000); // Show banner after 2 seconds
+        }
+
+        acceptBtn.addEventListener('click', function () {
+            banner.classList.remove('active');
+            // Store consent in local storage for 1 year
+            localStorage.setItem('cookie_consent', 'true');
+        });
+
+
+        // --- Animation Logic (from homepage) ---
+        const scrollElements = document.querySelectorAll(".animate-on-scroll");
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
+        };
+        const displayScrollElement = (element) => element.classList.add("is-visible");
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+        window.addEventListener("scroll", handleScrollAnimation);
+        handleScrollAnimation(); // Trigger on load for elements already in view
+
+
+        // --- Number Counter Logic (from homepage) ---
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            let hasAnimated = false;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        const counters = document.querySelectorAll('.stat-number');
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            let count = 0;
+                            const inc = target / 100; // Animation speed
+                            const updateCount = () => {
+                                if (count < target) {
+                                    count += inc;
+                                    counter.innerText = Math.ceil(count);
+                                    setTimeout(updateCount, 15);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCount();
+                        });
+                        hasAnimated = true;
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(statsSection);
+        }
+    });
+</script>
     
 </body>
 </html>
